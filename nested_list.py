@@ -5,18 +5,19 @@ students = [
             ['Kakunami', 19],
             ['Vikas', 21]
             ]
+scores = [i[1] for i in students]
+for i in scores:
+    times = scores.count(i)
+    if times > 1:
+        for _ in range(times-1):
+            scores.remove(i)
 
-
-students.sort(key = lambda x: x[1])
-print(students)
-second = students[1][1]
+scores.sort()
+second = scores[1]
 penult = []
 for student in students:
     if student[1] == second:
         penult.append(student[0])
 
-penult.sort()
-
-
-for student in penult:
+for student in sorted(penult):
     print(student)
