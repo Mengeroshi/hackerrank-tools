@@ -17,7 +17,6 @@ for student in students:
 
 penult.sort()
 
-"""
+
 for student in penult:
     print(student)
-"""
